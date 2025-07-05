@@ -1,0 +1,6 @@
+fastmcp==2.9.2
+langchain-community==0.3.26
+PyYAML==6.0.2
+pytube==15.0.0
+youtube-search==2.1.2
+youtube-transcript-api==1.1.0

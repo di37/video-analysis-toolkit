@@ -1,0 +1,9 @@
+streamlit
+plotly
+networkx
+pandas
+mcp_use
+langchain-openai 
+pyvis
+python-dotenv
+nest-asyncio

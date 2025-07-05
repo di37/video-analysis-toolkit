@@ -1,0 +1,12 @@
+services:
+  video-analysis-client:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+    volumes:
+      - ./config:/app/config:ro
+      - /Users/ishamrashik/Desktop/machine-learning-and-ai-projects/agents-tutorials/video-analysis-kit/data:/app/data:rw
+    restart: unless-stopped

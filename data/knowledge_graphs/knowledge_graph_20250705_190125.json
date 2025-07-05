@@ -1,0 +1,225 @@
+{
+  "nodes": [
+    {
+      "id": "bootcamp",
+      "label": "Event",
+      "properties": {
+        "name": "Agentic AI Bootcamp",
+        "description": "A multi-day instructional bootcamp about agentic AI frameworks, coding, and automation."
+      }
+    },
+    {
+      "id": "instructor",
+      "label": "Person",
+      "properties": {
+        "name": "Instructor",
+        "description": "Lecture host and explainer, also shares resources and project guidance."
+      }
+    },
+    {
+      "id": "cru_ai",
+      "label": "Product",
+      "properties": {
+        "name": "Crew AI",
+        "type": "Low-code multi-agent orchestration framework",
+        "description": "Framework for building, orchestrating, and customizing groups of AI agents."
+      }
+    },
+    {
+      "id": "langgraph",
+      "label": "Product",
+      "properties": {
+        "name": "LangGraph",
+        "type": "Coding framework"
+      }
+    },
+    {
+      "id": "llama_index",
+      "label": "Product",
+      "properties": {
+        "name": "LlamaIndex",
+        "type": "Coding/indexing/Agentic RAG framework"
+      }
+    },
+    {
+      "id": "small_agents",
+      "label": "Product",
+      "properties": {
+        "name": "Small Agents",
+        "type": "Multi-agent system framework"
+      }
+    },
+    {
+      "id": "langfuse",
+      "label": "Product",
+      "properties": {
+        "name": "LangFuse",
+        "type": "Evaluation/observation framework"
+      }
+    },
+    {
+      "id": "arise_phoenix",
+      "label": "Product",
+      "properties": {
+        "name": "Arise Phoenix",
+        "type": "Observation and evaluation tool"
+      }
+    },
+    {
+      "id": "nat",
+      "label": "Product",
+      "properties": {
+        "name": "NAT",
+        "type": "Low-code multi-agent orchestration framework"
+      }
+    },
+    {
+      "id": "thought_action_observation",
+      "label": "Concept",
+      "properties": {
+        "name": "Thought-Action-Observation Loop",
+        "description": "Cycle at the core of agentic design; allows planning, decisions, interaction with environment."
+      }
+    },
+    {
+      "id": "planner_agent",
+      "label": "Agent",
+      "properties": {
+        "name": "Planner Agent",
+        "role": "Content planner",
+        "goal": "Plans article contents",
+        "backstory": "Responsible for gathering and outlining information to build structured content."
+      }
+    },
+    {
+      "id": "writer_agent",
+      "label": "Agent",
+      "properties": {
+        "name": "Writer Agent",
+        "role": "Content writer",
+        "goal": "Writes comprehensive articles",
+        "backstory": "Transforms outlines into full articles following the plan."
+      }
+    },
+    {
+      "id": "editor_agent",
+      "label": "Agent",
+      "properties": {
+        "name": "Editor Agent",
+        "role": "Content editor",
+        "goal": "Edits and finalizes article",
+        "backstory": "Ensures article is well-written, consistent, and grammatically correct."
+      }
+    },
+    {
+      "id": "manager_agent",
+      "label": "Agent",
+      "properties": {
+        "name": "Manager Agent",
+        "role": "Task manager",
+        "goal": "Coordinates agents and divides tasks"
+      }
+    },
+    {
+      "id": "sales_rep_agent",
+      "label": "Agent",
+      "properties": {
+        "name": "Sales Rep Agent",
+        "role": "Lead profiling agent",
+        "goal": "Identifies and analyzes sales leads"
+      }
+    },
+    {
+      "id": "lead_sales_rep_agent",
+      "label": "Agent",
+      "properties": {
+        "name": "Lead Sales Rep Agent",
+        "role": "Outreach communication agent",
+        "goal": "Drafts personalized communications"
+      }
+    },
+    {
+      "id": "sequential_workflow",
+      "label": "Concept",
+      "properties": {
+        "name": "Sequential Workflow",
+        "description": "Agents perform tasks one after another, output handed from one to the next."
+      }
+    },
+    {
+      "id": "hierarchical_workflow",
+      "label": "Concept",
+      "properties": {
+        "name": "Hierarchical Workflow",
+        "description": "A manager agent assigns tasks to multiple agents."
+      }
+    },
+    {
+      "id": "hybrid_workflow",
+      "label": "Concept",
+      "properties": {
+        "name": "Hybrid Workflow",
+        "description": "A mix of hierarchical and sequential workflows."
+      }
+    },
+    {
+      "id": "parallel_workflow",
+      "label": "Concept",
+      "properties": {
+        "name": "Parallel Workflow",
+        "description": "Multiple agents operate in parallel."
+      }
+    },
+    {
+      "id": "async_workflow",
+      "label": "Concept",
+      "properties": {
+        "name": "Asynchronous Workflow",
+        "description": "Agents execute tasks independent of sequence."
+      }
+    },
+    {
+      "id": "api",
+      "label": "Concept",
+      "properties": {
+        "name": "OpenAI API Key",
+        "description": "Credential required to run many agentic systems."
+      }
+    },
+    {
+      "id": "serper_tool",
+      "label": "Tool",
+      "properties": {
+        "name": "Serper Tool",
+        "description": "Web search tool for lead profiling."
+      }
+    }
+  ],
+  "relationships": [
+    { "id": "rel_1", "type": "HOSTS", "source": "instructor", "target": "bootcamp", "properties": {} },
+    { "id": "rel_2", "type": "TEACHES", "source": "instructor", "target": "cru_ai", "properties": {} },
+    { "id": "rel_3", "type": "TEACHES", "source": "instructor", "target": "langgraph", "properties": {} },
+    { "id": "rel_4", "type": "INCLUDES", "source": "bootcamp", "target": "cru_ai", "properties": {} },
+    { "id": "rel_5", "type": "INCLUDES", "source": "bootcamp", "target": "langgraph", "properties": {} },
+    { "id": "rel_6", "type": "INCLUDES", "source": "bootcamp", "target": "llama_index", "properties": {} },
+    { "id": "rel_7", "type": "INCLUDES", "source": "bootcamp", "target": "small_agents", "properties": {} },
+    { "id": "rel_8", "type": "INCLUDES", "source": "bootcamp", "target": "langfuse", "properties": {} },
+    { "id": "rel_9", "type": "INCLUDES", "source": "bootcamp", "target": "arise_phoenix", "properties": {} },
+    { "id": "rel_10", "type": "ASSOCIATED_WITH", "source": "cru_ai", "target": "thought_action_observation", "properties": { "framework_usage": "uses for agent design cycles" } },
+    { "id": "rel_11", "type": "HAS_COMPONENT", "source": "cru_ai", "target": "planner_agent", "properties": {} },
+    { "id": "rel_12", "type": "HAS_COMPONENT", "source": "cru_ai", "target": "writer_agent", "properties": {} },
+    { "id": "rel_13", "type": "HAS_COMPONENT", "source": "cru_ai", "target": "editor_agent", "properties": {} },
+    { "id": "rel_14", "type": "ENABLES", "source": "cru_ai", "target": "sequential_workflow", "properties": {} },
+    { "id": "rel_15", "type": "ENABLES", "source": "cru_ai", "target": "parallel_workflow", "properties": {} },
+    { "id": "rel_16", "type": "ENABLES", "source": "cru_ai", "target": "hierarchical_workflow", "properties": {} },
+    { "id": "rel_17", "type": "ENABLES", "source": "cru_ai", "target": "hybrid_workflow", "properties": {} },
+    { "id": "rel_18", "type": "ENABLES", "source": "cru_ai", "target": "async_workflow", "properties": {} },
+    { "id": "rel_19", "type": "HAS_TOOL", "source": "sales_rep_agent", "target": "serper_tool", "properties": {} },
+    { "id": "rel_20", "type": "COORDINATES", "source": "manager_agent", "target": "planner_agent", "properties": {} },
+    { "id": "rel_21", "type": "COORDINATES", "source": "manager_agent", "target": "writer_agent", "properties": {} },
+    { "id": "rel_22", "type": "COORDINATES", "source": "manager_agent", "target": "editor_agent", "properties": {} },
+    { "id": "rel_23", "type": "SUCCEEDS", "source": "planner_agent", "target": "writer_agent", "properties": {} },
+    { "id": "rel_24", "type": "SUCCEEDS", "source": "writer_agent", "target": "editor_agent", "properties": {} },
+    { "id": "rel_25", "type": "INCLUDES", "source": "bootcamp", "target": "nat", "properties": {} }
+  ]
+}

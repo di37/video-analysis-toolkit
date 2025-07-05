@@ -1,0 +1,28 @@
+services:
+  # Video Analysis Kit Server
+  video-analysis-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: video-analysis-server
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+    volumes:
+      - /Users/ishamrashik/Desktop/machine-learning-and-ai-projects/agents-tutorials/video-analysis-kit/data:/app/data:rw
+    restart: unless-stopped
+    networks:
+      - video-analysis-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+networks:
+  video-analysis-network:
+    driver: bridge
