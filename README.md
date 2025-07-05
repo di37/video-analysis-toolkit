@@ -68,7 +68,7 @@ The project consists of two main components:
 ## Project Structure
 
 ```
-video-analysis-kit/
+youtube-video-analysis-kit/
 ├── README.md
 ├── data/                          # Shared data directory
 │   ├── transcripts/              # YouTube video transcripts
@@ -129,6 +129,13 @@ The client integrates with mcp-use library to:
 - Docker and Docker Compose
 - OpenAI API key
 - Python 3.12+ (for local development)
+
+### Clone the repository
+
+```bash
+git clone https://github.com/di37/youtube-video-analysis-toolkit.git
+cd youtube-video-analysis-toolkit
+```
 
 ### Docker Deployment
 
